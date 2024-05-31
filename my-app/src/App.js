@@ -24,15 +24,21 @@
 
 // export default App;
 
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 const App = () => {
-  const message = 'helo word';
-  return <div className='container'>
-    {message}
-    
-  </div>;
+  
+  const [message, setMessage] = useState('Mensagem inicial');
+  return (
+    <>
+      <div className='container'>
+        {message}
+      </div>
+
+      <button onClick={ () => setMessage("Nova mensagem")}>mudar mensagem</button>
+    </>
+  );
 };
 
 export default App;
