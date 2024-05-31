@@ -24,11 +24,15 @@
 
 // export default App;
 
-import React from 'react'
+import React from 'react';
+import './App.css';
 
 const App = () => {
   const message = 'helo word';
-  return <h1>{message}</h1>
+  return <div className='container'>
+    {message}
+    
+  </div>;
 };
 
 export default App;
