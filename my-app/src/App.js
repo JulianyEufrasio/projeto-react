@@ -26,17 +26,32 @@
 
 import React, { useState } from 'react';
 import './App.css';
+// importa componente
+import Tasks from './components/Tasks';
 
 const App = () => {
   
-  const [message, setMessage] = useState('Mensagem inicial');
+  const [tasks, setTasks] = useState([
+    {
+      id: '1',
+      title: 'Estudar programação',
+      completed: false,
+    },
+    {
+      id: '2',
+      title: 'Ler livros',
+      completed: true,
+    },
+  ]);
+
+  
   return (
     <>
       <div className='container'>
-        {message}
+        
+        {/* componente */}
+        <Tasks tasks = {tasks}/>
       </div>
-
-      <button onClick={ () => setMessage("Nova mensagem")}>mudar mensagem</button>
     </>
   );
 };
